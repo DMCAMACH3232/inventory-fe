@@ -13,4 +13,4 @@ COPY . .
 EXPOSE 3000
 
 # Comando para iniciar en modo desarrollo
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["sh", "-c", "npm run dev -- --host 0.0.0.0 --port ${PORT:-3000}"]
